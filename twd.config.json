@@ -1,0 +1,16 @@
+{
+  "url": "http://localhost:3000",
+  "timeout": 10000,
+  "coverage": false,
+  "headless": true,
+  "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+  "contractReportPath": ".twd/contract-report.md",
+  "contracts": [
+    {
+      "source": "./contracts/todos-3.0.json",
+      "baseUrl": "/api",
+      "mode": "error",
+      "strict": true
+    }
+  ]
+}

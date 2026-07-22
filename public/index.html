@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TWD Vanilla JS Example</title>
+
+    <!--
+      TWD is loaded straight from a CDN (esm.sh) via an import map. No bundler,
+      no `npm install twd-js`. The bundled entry is self-contained and esm.sh
+      resolves its internal React dependency automatically.
+      https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap
+    -->
+    <script type="importmap">
+      {
+        "imports": {
+          "twd-js": "https://esm.sh/twd-js@1.8.2",
+          "twd-js/runner": "https://esm.sh/twd-js@1.8.2/runner",
+          "twd-js/bundled": "https://esm.sh/twd-js@1.8.2/bundled"
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
