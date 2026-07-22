@@ -3,8 +3,9 @@ import { describe, it, beforeEach } from 'twd-js/runner';
 import todoListMock from './mocks/todoList.js';
 
 describe('Todo List Page', () => {
-  beforeEach(() => {
+  beforeEach(async () => {
     twd.clearRequestMockRules();
+    await twd.visit('/todos');
   });
 
   it('should display the todo list', async () => {
